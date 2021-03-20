@@ -1,0 +1,300 @@
+* {
+    box-sizing: border-box;
+}
+
+/* body 样式 */
+
+body {
+    font-family: Arial;
+    margin: 0;
+    background-color: rgba(240, 240, 240, 0.1);
+}
+
+/* 标题 */
+
+.header {
+    background-color: #ddd;
+    padding: 40px;
+    text-align: center;
+}
+
+/* 标题字体加大 */
+
+.header h1 {
+    font-size: 40px;
+}
+
+/* 导航 */
+
+.navbar {
+    overflow: hidden;
+    background-color: #ccc;
+}
+
+/* 导航栏样式 */
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #444;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+/* 右侧链接*/
+
+.navbar a.right {
+    float: right;
+}
+
+/* 鼠标移动到链接的颜色 */
+
+.navbar a:hover {
+    background-color: #444;
+    color: #ddd;
+}
+
+.side ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+/* 鼠标移动到选项上修改背景颜色 */
+
+li:active {
+    border-top: 1px solid #888;
+    border-left: 1px solid #888;
+}
+
+li a:hover {
+    background-color: #666;
+    color: white;
+}
+
+li a:active {
+    background-color: #aaa;
+    color: white;
+}
+
+.navbar a.active {
+    background-color: #aaa;
+    color: white;
+}
+
+.side a.active {
+    background-color: #ddd;
+}
+
+a.newpage {
+    padding: 5px;
+    border: #aaa;
+    border-style: solid;
+    text-decoration: none;
+}
+
+a.newpage:link {
+    color: #000;
+    border-width: 1px;
+    background-color: #eee;
+}
+
+a.newpage:visited {
+    color: #333;
+    border-width: 1px;
+    background-color: #ddd;
+}
+
+a.newpage:hover {
+    color: #eee;
+    border-width: 1px;
+    background-color: #888;
+}
+
+a.newpage:active {
+    color: #000;
+    border-width: 2px;
+    background-color: #ccc;
+}
+
+/* 列容器 */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* 创建两个列 */
+
+/* 边栏 */
+
+.side {
+    flex: 20%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+/* 主要的内容区域 */
+
+.main {
+    flex: 80%;
+    background-color: #eee;
+    padding: 20px;
+}
+
+.container {
+    position: relative;
+    width: 300px;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: 1;
+    transition: .5s ease;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color: #ccc;
+    overflow: hidden;
+    opacity: 0;
+    transition: .5s ease;
+}
+
+.container:hover .overlay {
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+}
+
+.container:hover .image {
+    opacity: 0.3;
+}
+
+.text {
+    white-space: nowrap;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 图片 */
+
+div.photoFrame {
+    margin: 5px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-right: 1%;
+    margin-left: 1%;
+    width: 30%;
+    height: 300px;
+}
+
+div.photo {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 250px;
+}
+
+div.photoFrame:hover {
+    border: 1px solid #777;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+}
+
+div.photo img {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+}
+div.photo:hover {
+    overflow: visible;
+}
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+input[type=text] {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    background-color: #666;
+    color: white;
+    padding: 4px 16px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #333;
+}
+
+/* 底部 */
+
+.footer {
+    bottom: 0;
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    color: white;
+}
+
+.footer>img {
+    vertical-align: middle;
+}
+
+.footer>span {
+    vertical-align: middle;
+}
+
+/* 响应式布局 - 在屏幕设备宽度尺寸小于 700px 时, 让两栏上下堆叠显示 */
+
+@media screen and (max-width: 800px) {
+    .row {
+        flex-direction: column;
+    }
+    div.photoFrame {
+        width: 100%;
+    }
+}
+
+/* 响应式布局 - 在屏幕设备宽度尺寸小于 400px 时, 让导航栏目上下堆叠显示 */
+
+@media screen and (max-width: 400px) {
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+}
