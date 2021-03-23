@@ -70,6 +70,40 @@ li a {
     text-decoration: none;
 }
 
+#game {
+    display: block;
+    padding: 15px;
+    width: 180px;
+    border: #aaa;
+    border-style: solid;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: #ddd;
+}
+
+#game:link {
+    color: #000;
+    border-width: 1px;
+    background-color: #ddd;
+}
+
+#game:visited {
+    color: #333;
+    border-width: 1px;
+    background-color: #aaa;
+}
+
+#game:hover {
+    color: #eee;
+    border-width: 1px;
+    background-color: #888;
+}
+
+#game:active {
+    color: #000;
+    border-width: 2px;
+    background-color: #ccc;
+}
 /* 鼠标移动到选项上修改背景颜色 */
 
 li:active {
