@@ -72,11 +72,11 @@ li a {
 
 #game {
     display: block;
-    padding: 15px;
+    padding: 12px;
     width: 180px;
     border: #aaa;
     border-style: solid;
-    border-radius: 5px;
+    border-radius: 4px;
     text-decoration: none;
     background-color: #ddd;
 }
@@ -90,7 +90,7 @@ li a {
 #game:visited {
     color: #333;
     border-width: 1px;
-    background-color: #aaa;
+    background-color: #ccc;
 }
 
 #game:hover {
