@@ -1550,7 +1550,7 @@ window.__require = function e(t, n, o) {
                             4 == t.createFruitCount ? (a.default.Instance.createOneFruit(2), t.createFruitCount++) : 
                             5 == t.createFruitCount ? (a.default.Instance.createOneFruit(3), t.createFruitCount++) : 
                             t.createFruitCount > 5 && (a.default.Instance.createOneFruit(
-                                s.default.RandomInteger(0, 5)+s.default.RandomInteger(0, 5)*s.default.RandomInteger(0, 1)
+                                s.default.RandomInteger(0, 5)+s.default.RandomInteger(0, 5)*Math.round(Math.random())
                             ), t.createFruitCount++))
                         }, .5))
                 }, t.prototype.closeTouch = function() {
