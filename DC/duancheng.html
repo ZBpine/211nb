@@ -7,81 +7,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         .container {
-            width: 20%;
-            position: relative;
+            width: 658px;
+            height: 780px;
+            background-image: url("DC1.jpg");
+            animation-name: change;
+            animation-duration: 14s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
         }
 
-        .container #img1 {
-            position: absolute;
-            overflow: hidden;
-            width: 100%;
-            transition: .5s ease-out;
-            z-index: 2;
-        }
+        @keyframes change {
+            0% {
+                background-image: url("DC1.jpg");
+            }
 
-        .container:hover #img1 {
-            position: absolute;
-            overflow: hidden;
-            opacity: 0;
-        }
+            3% {
+                background-image: url("DC1.jpg");
+            }
 
-        .container #img2 {
-            position: absolute;
-            overflow: hidden;
-            top: 38px;
-            left: 22%;
-            width: 61%;
-            transition: .5s ease-out .5s;
-            z-index: 3;
-        }
+            14% {
+                background-image: url("DC2.jpg");
+            }
 
-        .container:hover #img2 {
-            animation-play-state: paused;
-            position: absolute;
-            overflow: hidden;
-            top: 25px;
-            left: 31%;
-            width: 40%;
-            transform: rotate(20deg);
-        }
+            17% {
+                background-image: url("DC2.jpg");
+            }
 
-        .container #img3 {
-            position: absolute;
-            overflow: hidden;
-            top: 5%;
-            width: 100%;
-            opacity: 0;
-            transition: .3s ease-out 1s;
-            z-index: 1;
-        }
+            28% {
+                background-image: url("DC3.jpg");
+            }
 
-        .container:hover #img3 {
-            position: absolute;
-            overflow: hidden;
-            opacity: 1;
-        }
+            31% {
+                background-image: url("DC3.jpg");
+            }
 
-        .container:hover {
-            animation-play-state: paused;
-        }
+            42% {
+                background-image: url("DC4.jpg");
+            }
 
+            45% {
+                background-image: url("DC4.jpg");
+            }
 
-        @media screen and (max-width: 800px) {
-            .container {
-                width: 50%;
+            56% {
+                background-image: url("DC5.jpg");
+            }
+
+            59% {
+                background-image: url("DC5.jpg");
+            }
+
+            70% {
+                background-image: url("DC6.jpg");
+            }
+
+            73% {
+                background-image: url("DC6.jpg");
+            }
+
+            85% {
+                background-image: url("DC7.jpg");
+            }
+
+            88% {
+                background-image: url("DC7.jpg");
             }
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <a href="../images/刘若松1.jpg" target="_blank">
-            <img src="./DC1.jpg" alt="DC" id="img1">
-            <img src="./DC2.png" alt="DC" id="img2">
-            <img src="./DC3.jpg" alt="DC" id="img3">
-        </a>
-    </div>
+    <div class="container"></div>
 </body>
 
 </html>
