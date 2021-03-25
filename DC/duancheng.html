@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>DC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .container {
+            width: 20%;
+            position: relative;
+        }
+
+        .container #img1 {
+            position: absolute;
+            overflow: hidden;
+            width: 100%;
+            transition: .5s ease-out;
+            z-index: 2;
+        }
+
+        .container:hover #img1 {
+            position: absolute;
+            overflow: hidden;
+            opacity: 0;
+        }
+
+        .container #img2 {
+            position: absolute;
+            overflow: hidden;
+            top: 38px;
+            left: 22%;
+            width: 61%;
+            transition: .5s ease-out .5s;
+            z-index: 3;
+        }
+
+        .container:hover #img2 {
+            animation-play-state: paused;
+            position: absolute;
+            overflow: hidden;
+            top: 25px;
+            left: 31%;
+            width: 40%;
+            transform: rotate(20deg);
+        }
+
+        .container #img3 {
+            position: absolute;
+            overflow: hidden;
+            top: 5%;
+            width: 100%;
+            opacity: 0;
+            transition: .3s ease-out 1s;
+            z-index: 1;
+        }
+
+        .container:hover #img3 {
+            position: absolute;
+            overflow: hidden;
+            opacity: 1;
+        }
+
+        .container:hover {
+            animation-play-state: paused;
+        }
+
+
+        @media screen and (max-width: 800px) {
+            .container {
+                width: 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="../images/刘若松1.jpg" target="_blank">
+            <img src="./DC1.jpg" alt="DC" id="img1">
+            <img src="./DC2.png" alt="DC" id="img2">
+            <img src="./DC3.jpg" alt="DC" id="img3">
+        </a>
+    </div>
+</body>
+
+</html>
