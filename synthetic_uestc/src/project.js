@@ -1,12 +1,23 @@
-let maxBall;
-let maxBallStr = '';
+var maxBall;
+var maxBallStr = '';
+var ballSize;
+var ballSizeStr = '';
 
 // 输入有效数字才进入游戏
 while (isNaN(maxBall)) {
     maxBallStr = prompt('请输入最大的球数字（1~11；1最小，11最大）', '5').trim();
-    maxBall = parseInt(maxBallStr);
-    if (maxBall > 11) maxBall = 11;
-    if (maxBall < 1) maxBall = 1;
+    if (maxBallStr == "lrssb") {
+        ballSizeStr = prompt('作弊码正确，请输入球数字（1~11；1最小，11最大）', '5').trim();
+        ballSize = parseInt(ballSizeStr) - 1;
+        if (ballSize > 10) ballSize = 10;
+        if (ballSize < 0) ballSize = 0;
+        maxBall = ballSize + 1;
+    } else {
+        ballSize = 0;
+        maxBall = parseInt(maxBallStr);
+        if (maxBall > 11) maxBall = 11;
+        if (maxBall < 1) maxBall = 1;
+    }
 }
 
 window.__require = function e(t, n, o) {
@@ -1553,7 +1564,7 @@ window.__require = function e(t, n, o) {
                         a.default.Instance.targetFruit.getComponent(cc.RigidBody).linearVelocity = cc.v2(0, -800), 
                         a.default.Instance.targetFruit = null, 
                         this.scheduleOnce(function() {
-                        i.default.GameUpdateCtrl && (a.default.Instance.createOneFruit(s.default.RandomInteger(0, maxBall)))
+                        i.default.GameUpdateCtrl && (a.default.Instance.createOneFruit(s.default.RandomInteger(ballSize, maxBall)))
                         }, .5))
                 }, t.prototype.closeTouch = function() {
                     this.node.off(cc.Node.EventType.TOUCH_START, this.onTouchStart, this), this.node.off(cc.Node.EventType.TOUCH_MOVE, this.onTouchMove, this), this.node.off(cc.Node.EventType.TOUCH_END, this.onTouchEnd, this), this.node.off(cc.Node.EventType.TOUCH_CANCEL, this.onTouchEnd, this)
