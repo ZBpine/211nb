@@ -3,10 +3,10 @@ let maxBallStr = '';
 
 // 输入有效数字才进入游戏
 while (isNaN(maxBall)) {
-    maxBallStr = prompt('请输入最大的球数字（0~10；0最小，10最大）', '5').trim();
+    maxBallStr = prompt('请输入最大的球数字（1~11；1最小，11最大）', '5').trim();
     maxBall = parseInt(maxBallStr);
-    if (maxBall > 10) maxBall = 10;
-    if (maxBall < 0) maxBall = 0;
+    if (maxBall > 11) maxBall = 11;
+    if (maxBall < 1) maxBall = 1;
 }
 
 window.__require = function e(t, n, o) {

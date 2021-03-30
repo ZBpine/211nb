@@ -1,0 +1,43 @@
+div.photoFrame {
+    margin: 5px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-right: 1%;
+    margin-left: 1%;
+    width: 30%;
+    height: 300px;
+}
+
+div.photo {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 250px;
+}
+
+div.photoFrame:hover {
+    border: 1px solid #777;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+}
+
+div.photo img {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+}
+div.photo:hover {
+    overflow: visible;
+}
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+    div.photoFrame {
+        width: 100%;
+    }
+}

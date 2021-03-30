@@ -5,8 +5,32 @@
     <meta charset="utf-8">
     <title>211班级</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="../styles/test.css">
+    <link rel="stylesheet" type="text/css" href="../styles/main.css">
     <link rel="shortcut icon" type="image/x-icon" href="../images/icon.ico">
+    <style>
+        input[type=text] {
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=submit] {
+            background-color: #666;
+            color: white;
+            padding: 4px 16px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #333;
+        }
+    </style>
 </head>
 
 <body>
@@ -24,7 +48,9 @@
     </div>
     <br /><br /><br />
 
-    <label for="password"><pre style="display: inline;">    </pre>密码</label>
+    <label for="password">
+        <pre style="display: inline;">    </pre>密码
+    </label>
     <input type="password" id="password" name="password" placeholder="password..">
     <input type="submit" value="登录" onclick="login()">
 

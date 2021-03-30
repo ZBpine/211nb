@@ -1,0 +1,30 @@
+a.newpage {
+    padding: 5px;
+    border: #aaa;
+    border-style: solid;
+    text-decoration: none;
+}
+
+a.newpage:link {
+    color: #000;
+    border-width: 1px;
+    background-color: #eee;
+}
+
+a.newpage:visited {
+    color: #333;
+    border-width: 1px;
+    background-color: #ddd;
+}
+
+a.newpage:hover {
+    color: #eee;
+    border-width: 1px;
+    background-color: #888;
+}
+
+a.newpage:active {
+    color: #000;
+    border-width: 2px;
+    background-color: #ccc;
+}
