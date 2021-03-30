@@ -13,7 +13,7 @@ body {
 /* 标题 */
 
 .header {
-    background-color: #ddd;
+    background-color: #f3f3f3;
     padding: 40px;
     text-align: center;
 }
@@ -28,7 +28,8 @@ body {
 
 .navbar {
     overflow: hidden;
-    background-color: #ccc;
+    background-color: #ddd;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 /* 导航栏样式 */
@@ -43,8 +44,9 @@ body {
 }
 
 .navbar a:hover {
-    background-color: #444;
+    background-color: #555;
     color: #ddd;
+    box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.5);
 }
 
 .navbar a.active {
@@ -74,6 +76,7 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .side li a {
@@ -91,6 +94,7 @@ body {
 .side li a:hover {
     background-color: #666;
     color: white;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
 }
 
 .side li a:active {
@@ -106,7 +110,7 @@ body {
 
 .main {
     flex: 80%;
-    background-color: #eee;
+    background-color: white;
     padding: 20px;
 }
 
