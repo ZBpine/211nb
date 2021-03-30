@@ -1,3 +1,14 @@
+let maxBall;
+let maxBallStr = '';
+
+// 输入有效数字才进入游戏
+while (isNaN(maxBall)) {
+    maxBallStr = prompt('请输入最大的球数字（0~10；0最小，10最大）', '5').trim();
+    maxBall = parseInt(maxBallStr);
+    if (maxBall > 10) maxBall = 10;
+    if (maxBall < 0) maxBall = 0;
+}
+
 window.__require = function e(t, n, o) {
     function c(i, r) {
         if (!n[i]) {
@@ -1512,7 +1523,7 @@ window.__require = function e(t, n, o) {
             p = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
-                    return t.Rocker = null, t.stick = null, t.Max_r = 100, t.RockerJS = null, t.speed = 400, t.Arrow = null, t.knife = null, t.startPoint = null, t.touchPoint = null, t.endPoint = null, t.ddir = cc.v2(0, 0), t.isCut = !1, t.comboTime = 0, t.comboInterval = .4, t.comboNumber = 0, t.comboMaxNum = 7, t.touchNum = 0, t.createFruitCount = 0, t.istest = !1, t
+                    return t.Rocker = null, t.stick = null, t.Max_r = 100, t.RockerJS = null, t.speed = 400, t.Arrow = null, t.knife = null, t.startPoint = null, t.touchPoint = null, t.endPoint = null, t.ddir = cc.v2(0, 0), t.isCut = !1, t.comboTime = 0, t.comboInterval = .4, t.comboNumber = 0, t.comboMaxNum = 7, t.touchNum = 0, t.istest = !1, t
                 }
                 var n;
                 return o(t, e), n = t, t.prototype.onLoad = function() {
@@ -1542,16 +1553,7 @@ window.__require = function e(t, n, o) {
                         a.default.Instance.targetFruit.getComponent(cc.RigidBody).linearVelocity = cc.v2(0, -800), 
                         a.default.Instance.targetFruit = null, 
                         this.scheduleOnce(function() {
-                        i.default.GameUpdateCtrl && (
-                            0 == t.createFruitCount ? (a.default.Instance.createOneFruit(0), t.createFruitCount++) : 
-                            1 == t.createFruitCount ? (a.default.Instance.createOneFruit(0), t.createFruitCount++) : 
-                            2 == t.createFruitCount ? (a.default.Instance.createOneFruit(1), t.createFruitCount++) : 
-                            3 == t.createFruitCount ? (a.default.Instance.createOneFruit(2), t.createFruitCount++) : 
-                            4 == t.createFruitCount ? (a.default.Instance.createOneFruit(2), t.createFruitCount++) : 
-                            5 == t.createFruitCount ? (a.default.Instance.createOneFruit(3), t.createFruitCount++) : 
-                            t.createFruitCount > 5 && (a.default.Instance.createOneFruit(
-                                s.default.RandomInteger(0, 5)+s.default.RandomInteger(0, 5)*Math.round(Math.random())
-                            ), t.createFruitCount++))
+                        i.default.GameUpdateCtrl && (a.default.Instance.createOneFruit(s.default.RandomInteger(0, maxBall)))
                         }, .5))
                 }, t.prototype.closeTouch = function() {
                     this.node.off(cc.Node.EventType.TOUCH_START, this.onTouchStart, this), this.node.off(cc.Node.EventType.TOUCH_MOVE, this.onTouchMove, this), this.node.off(cc.Node.EventType.TOUCH_END, this.onTouchEnd, this), this.node.off(cc.Node.EventType.TOUCH_CANCEL, this.onTouchEnd, this)
